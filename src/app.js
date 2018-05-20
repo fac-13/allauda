@@ -29,7 +29,6 @@ app.engine(
   }),
 );
 
-
 app.set('host', process.env.HOST || 'localhost');
 app.set('port', process.env.PORT || 3000);
 app.use(express.static(path.join(__dirname, '..', 'public')));

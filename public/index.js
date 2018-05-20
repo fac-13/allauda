@@ -1,4 +1,3 @@
-
 /* eslint-disable */
 const main = document.querySelector('main');
 const tryMeButton = document.getElementById('button__tryMe');
@@ -7,8 +6,6 @@ const randomGift = document.getElementById('link__randomGift');
 // let content = localStorage.getItem('content')
 //   ? JSON.parse(localStorage.getItem('content'))
 //   : {};
-
-
 
 /**
  * fetch API content from server
@@ -25,7 +22,6 @@ const fetchContent = (url) => {
     });
 };
 
-
 /**
  * Check if there is a service worker and register it
  */
@@ -36,7 +32,6 @@ if ('serviceWorker' in navigator) {
   });
 }
 
-
 /**
  * Add event listeer to randomGiftButton to check if the user is online 
  */
@@ -46,26 +41,23 @@ if (window.location.pathname == '/try') {
   });
 }
 
-
 /**
  * Check if user is online, if offline open dialog box
  */
 const checkOffline = () => {
-//   if (!window.navigator.onLine) {
-//     const dialog = document.querySelector('dialog');
-//     setTimeout(() => {
-//       dialog.show();
-//     }, 500);
-//     setTimeout(() => {
-//       dialog.close();
-//     }, 4000);
-//   } else {
-//     console.log("You are online");
-    fetchContent('/api/tryContent'); 
-//   }
-}
-
-
+  //   if (!window.navigator.onLine) {
+  //     const dialog = document.querySelector('dialog');
+  //     setTimeout(() => {
+  //       dialog.show();
+  //     }, 500);
+  //     setTimeout(() => {
+  //       dialog.close();
+  //     }, 4000);
+  //   } else {
+  //     console.log("You are online");
+  fetchContent('/api/tryContent')
+  //   }
+};
 
 /**
  * stores content in localStorage
@@ -74,21 +66,18 @@ const checkOffline = () => {
 //   localStorage.setItem('content', JSON.stringify(content));
 // };
 
-
 /**
- * @param  {} content - content stored in localStorage 
- * Render content on the page 
+ * @param  {} content - content stored in localStorage
+ * Render content on the page
  */
 
 const renderContent = (content) => {
   const section = document.querySelector('.section__content');
   for (let item in content) {
     content[item].map((el) => {
-      const articles = `<div class="content__articles"><a href="${el.url}" target="_blank" class="link__title"><h3 class="title">${el.title}</h3></a><p>${el.description}</p><img class="img__article" src="${el.urlToImage}"/></div>"`
+      const articles = `<div class="content__articles"><a href="${el.url}" target="_blank" class="link__title"><h3
+       class="title">${el.title}</h3></a><p>${el.description}</p><img class="img__article" src="${el.urlToImage}"/></div>`;
       section.insertAdjacentHTML('beforeend', articles);
     });
   }
 };
-
-
-

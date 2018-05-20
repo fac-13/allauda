@@ -1,7 +1,7 @@
 const { getUser } = require('./../model/queries/getUser');
 
 exports.get = async (req, res) => {
-  const { username } = req.session;
+  const username = req.params.username;
   const initial = username[0].toUpperCase();
   if (username === req.params.username) {
     try {

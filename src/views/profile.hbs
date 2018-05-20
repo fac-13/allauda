@@ -1,12 +1,10 @@
-<div class="container__editprofile">
-
-    <button class="button button__profile button__edit">edit</button>
+<button class="button button__profile button__edit">edit</button>
 
 <div class="container__user">
-<div class="container__avatar">
-  <p class="initial">{{initial}}</p>
-</div>
-<p>{{username}}</p>
+  <div class="container__avatar">
+    <p class="initial">{{initial}}</p>
+  </div>
+  <p>{{username}}</p>
 </div>
 
 </div>
@@ -15,11 +13,11 @@
 <div class="container__likes">
   I like: {{userLikes}}
 </div>
-<a href="/logout">
+<a class="link__logout" href="/logout">
   <button class="button button__profile button__logout">logout</button>
 </a>
-<a href="/delete">
-<button class="button button__delete">delete</button>
+<a class="link__delete" href="/delete">
+  <button class="button button__delete">delete</button>
 </a>
 {{#if errorMessage}}
 <p class="error">{{errorMessage}}</p>
