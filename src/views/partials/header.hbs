@@ -1,6 +1,6 @@
 <nav class="nav">
 
-  <a href={{backLink}} class="goBack">
+  <a href="{{backLink}}" class="goBack">
     <div class="container__back">
       <img class="back_icon" src="/images/back_min.svg" alt="go back">
     </div>
@@ -8,22 +8,19 @@
   {{#if usercontent}}
   <nav class="nav">
     <div class="container__empty">
-     
     </div>
-   <a class="link" href="/profile/{{username}}">
-    <div class="container__back">
-      <p class="initial">{{initial}}</p>
-    </div>
-   </a>
-   </nav>
-  {{/if}}
-   
-   {{#if thankYou}}
-   <a class="link" href="/profile/{{user}}">
+    <a class="link" href="/profile/{{username}}">
+      <div class="container__back">
+        <p class="initial">{{initial}}</p>
+      </div>
+    </a>
+  </nav>
+  {{/if}} {{#if thankYou}}
+  <a class="link" href="/profile/{{user}}">
     <div class="container__back">
       <p class="link initial">{{initial}}</p>
     </div>
-   </a>
+  </a>
   {{/if}}
 
 </nav>

@@ -1,17 +1,14 @@
-
-<section>
+<section class="section__content">
   <ul class="container__list">
-    {{#each likedContent}}
-      {{#each this}}
-        <li class="content__articles list__item">
-           <a href="{{this.url}}" target="_blank" class="link__title">
-             <h3 class="title">{{this.title}}</h3>
-             </a>
-          <img class="img__article" src={{this.urlToImage}}>
-          <p class="content__article">{{this.description}}</p>
-        </li>
-      {{/each}}
-    {{/each}}
+    {{#each likedContent}} {{#each this}}
+    <li class="content__articles list__item">
+      <a href="{{this.url}}" target="_blank" class="link__title">
+        <h3 class="title">{{this.title}}</h3>
+      </a>
+      <img class="img__article" src={{this.urlToImage}}>
+      <p class="content__article">{{this.description}}</p>
+    </li>
+    {{/each}} {{/each}}
   </ul>
 
 </section>

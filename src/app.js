@@ -25,13 +25,12 @@ app.engine(
     extname: 'hbs',
     layoutsDir: path.join(__dirname, 'views', 'layouts'),
     partialsDir: path.join(__dirname, 'views', 'partials'),
-    defaultLayout: 'main',
-  }),
+    defaultLayout: 'main'
+  })
 );
 
-
 app.set('host', process.env.HOST || 'localhost');
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || 5000);
 app.use(express.static(path.join(__dirname, '..', 'public')));
 
 app.use(controllers);
