@@ -8,14 +8,11 @@ exports.get = async (req, res) => {
       const user = await getUser(username);
       const userLikes = user.like;
       res.render('profile', {
-        userLikes,
-        backLink: `/usercontent/${req.session.username}`,
-        username,
-        initial
+        userLikes, backLink: `/usercontent/${req.session.username}`, username, initial,
       });
     } catch (err) {
       res.render('profile', {
-        errorMessage: 'Something went wrong. We have no idea what it was'
+        errorMessage: 'Something went wrong. We have no idea what it was',
       });
     }
   }
