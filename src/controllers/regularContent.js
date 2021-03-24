@@ -37,3 +37,4 @@ fetchApi(newsUrl);
 exports.get = (req, res) => {
   res.send(content);
 };
+
